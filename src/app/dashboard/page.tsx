@@ -1,7 +1,6 @@
 import CreateFolderModal from "@/components/create-folder-modal";
 import FilesBreadcrumb from "@/components/files-breadcrumb";
 import FilesGrid from "@/components/files-grid";
-import { Button } from "@/components/ui/button";
 import UploadFileModal from "@/components/upload-modal";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";

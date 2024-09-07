@@ -2,7 +2,6 @@
 
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { FILE_SYSTEM_ITEM_TYPE } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
