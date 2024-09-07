@@ -26,7 +26,7 @@ export default async function DashboardPage() {
 	);
 }
 
-export function TopBar() {
+function TopBar() {
 	return (
 		<div className="w-full flex items-center gap-2">
 			<UploadFileModal />
