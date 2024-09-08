@@ -8,11 +8,11 @@ import {
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { useStore } from "@/store/store";
+import { useMemo } from "react";
 
 const getSteps = (path: string) => {
 	if (path === "") return [];
 	const steps = path.split("/").filter((step) => step !== "");
-	// console.log(steps);
 	return steps;
 };
 
@@ -24,7 +24,8 @@ const getPathToStep = (steps: string[], finalStep: string) => {
 
 export default function FilesBreadcrumb() {
 	const { currentPath, changePath } = useStore();
-	const steps = getSteps(currentPath);
+	// const steps = getSteps(currentPath);
+	const steps = useMemo(() => getSteps(currentPath), [currentPath]);
 	return (
 		<Breadcrumb>
 			<BreadcrumbList>
